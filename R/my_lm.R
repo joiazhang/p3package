@@ -15,9 +15,6 @@
 #'
 #' @export
 my_lm <- function(formula, data) {
-  if(class(formula) != "forumula") {
-    stop("formula must be of type formula")
-  }
   # extract model matrix X
   X <- model.matrix(formula, data)
   # extract a model frame object
