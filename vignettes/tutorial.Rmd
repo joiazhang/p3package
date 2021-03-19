@@ -65,6 +65,6 @@ H_a: \mu &> 60.
 ttest3 <- my_t.test(x = my_gapminder$lifeExp, alternative = "greater", mu = 60)
 ttest3
 ```
-The p-value (`ttest2$p_val`) is much greater than the p-value threshold of $\alpha = 0.05$ so there is definitely not sufficient evidence to reject the null hypothesis.
+The p-value (`ttest2$p_val`) is much greater than the p-value threshold of $\alpha = 0.05$ so there is definitely not sufficient evidence to reject the null hypothesis. 
 
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/my_t.test.R
 \name{my_t.test}
 \alias{my_t.test}
-\title{t-test function}
+\title{t-test Function}
 \usage{
 my_t.test(x, alternative = "two.sided", mu)
 }
@@ -24,5 +24,8 @@ the parameter \code{alternative}, and \code{p_val} the numeric p value.
 This function performs a one sample t-test.
 }
 \examples{
+my_t.test(x = my_data, alternative = "greater", mu = true_mean)
+my_t.test(x = my_data, alternative = "less", mu = true_mean)
+my_t.test(x = simulations, mu = 0)
 
 }
