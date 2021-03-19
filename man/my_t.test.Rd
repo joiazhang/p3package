@@ -29,3 +29,5 @@ my_t.test(my_gapminder$lifeExp, alternative = "greater", 60)
 my_t.test(x = my_gapminder$lifeExp, mu = 60)
 
 }
+\keyword{inference,}
+\keyword{prediction}

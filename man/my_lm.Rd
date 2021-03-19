@@ -23,3 +23,4 @@ my_lm(mpg ~ hp + wt, data = mtcars)
 my_lm(lifeExp ~ gdpPercap + continent, data = my_gapminder)
 
 }
+\keyword{inference}

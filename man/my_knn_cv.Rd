@@ -21,3 +21,4 @@ A list with objects \code{class} a vector of the predicted class for all observa
 \description{
 This function fits a linear model.
 }
+\keyword{prediction}
