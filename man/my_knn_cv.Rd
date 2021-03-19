@@ -22,7 +22,7 @@ A list with objects \code{class} a vector of the predicted class for all observa
 This function fits a linear model.
 }
 \examples{
-my_knn_cv(train = my_data, cl = y, k_nn = 1, k_cv = 5)
-my_knn_cv(train = my_data, cl = y, k_nn = 5, k_cv = 10)
+my_knn_cv(train = x, cl = y, k_nn = 1, k_cv = 5)
+my_knn_cv(train = x, cl = y, k_nn = 5, k_cv = 10)
 
 }
