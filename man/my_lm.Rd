@@ -18,3 +18,8 @@ coefficients, standard error, t value, and p value, \code{ybar} the predictions
 \description{
 This function fits a linear model.
 }
+\examples{
+my_lm(mpg ~ hp + wt, data = mtcars)
+my_lm(lifeExp ~ gdpPerCap + continent, data = my_gapminder)
+
+}

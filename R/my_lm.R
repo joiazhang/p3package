@@ -8,6 +8,10 @@
 #' @return A list with elements \code{Coefficients} which is a matrix containing
 #'  coefficients, standard error, t value, and p value, \code{ybar} the predictions
 #'
+#' @examples
+#' my_lm(mpg ~ hp + wt, data = mtcars)
+#' my_lm(lifeExp ~ gdpPerCap + continent, data = my_gapminder)
+#'
 #' @export
 my_lm <- function(formula, data) {
   # extract model matrix X
