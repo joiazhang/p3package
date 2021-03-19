@@ -25,3 +25,11 @@ You can install the p3package package using the following line:
 devtools::install_github("joiazhang/p3package", build_vignette = TRUE, build_opts = c())
 library(p3package)
 ```
+## Tutorials
+
+# `"my_t.test` Tutorial
+
+
+
+
+
