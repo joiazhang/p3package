@@ -71,3 +71,12 @@ ttest3
 The p-value (`ttest2$p_val`) is much greater than the p-value threshold of $\alpha = 0.05$ so there is definitely not sufficient evidence to reject the null hypothesis. 
 
 ### `my_lm` Tutorial
+```{r}
+lm_fit <- my_lm(lifeExp ~ gdpPercap + continent, data = my_gapminder)
+gdpPercap_coeff <- lm["gdpPercap", "Estimate"]
+gdpPercap_p_val <- lm["gdpPercap", "Pr(>|t|)"]
+
+# ggplot(data = my_gapminder, aes(y = ))
+```
+While the `gdpPercap` coefficient is very small (`gdpPercap_coeff`), it is still significant. The null hypothesis for the `gdpPercap` coefficient is that it does affect life expectancy significantly. The alternative hypothesis is that `gdpPercap` does affect life expectancy significantly. The p-value for the gdpPercap coefficient is `gdpPercap_p_val` which is much below the p-value cut off of 0.05. Thus, there is sufficient evidence to reject the null hypothesis and conclude that gdp per capita affects life expectancy. 
+
