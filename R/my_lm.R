@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' my_lm(mpg ~ hp + wt, data = mtcars)
-#' my_lm(lifeExp ~ gdpPerCap + continent, data = my_gapminder)
+#' my_lm(lifeExp ~ gdpPercap + continent, data = my_gapminder)
 #'
 #' @export
 my_lm <- function(formula, data) {
