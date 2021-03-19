@@ -16,8 +16,7 @@ my_knn_cv(train, cl, k_nn, k_cv)
 \item{k_cv}{integer representing the number of folds.}
 }
 \value{
-A list with objects \code{class} a vector of the predicted class
-$\hat{Y}_{i}$ for all observations, \code{cv_err} a numeric with the cross-validation misclassification error.
+A list with objects \code{class} a vector of the predicted class for all observations, \code{cv_err} a numeric with the cross-validation misclassification error.
 }
 \description{
 This function fits a linear model.
