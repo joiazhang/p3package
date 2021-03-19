@@ -7,8 +7,7 @@
 #' @param k_nn integer representing the number of neighbors.
 #' @param k_cv integer representing the number of folds.
 #'
-#' @return A list with objects \code{class} a vector of the predicted class
-#'  $\hat{Y}_{i}$ for all observations, \code{cv_err} a numeric with the cross-validation misclassification error.
+#' @return A list with objects \code{class} a vector of the predicted class for all observations, \code{cv_err} a numeric with the cross-validation misclassification error.
 #'
 #' @importFrom stats model.frame model.matrix model.response na.omit predict pt sd
 #' @importFrom dplyr filter

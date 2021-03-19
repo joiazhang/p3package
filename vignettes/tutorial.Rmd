@@ -20,16 +20,19 @@ knitr::opts_chunk$set(
 
 You can install the p3package package using the following line:
 
-```{r}
+```{r, evall = FALSE}
 # install.packages("devtools")
 devtools::install_github("joiazhang/p3package", build_vignette = TRUE, build_opts = c())
 library(p3package)
 ```
 
 ## Tutorials
-A p-value cut off of $\alpha = 0.05$ will be used in these tutorials.
+```{r}
+library(p3package)
+```
 
 ### `my_t.test` Tutorial
+A p-value cut off of $\alpha = 0.05$ will be used in these tutorials.
 #### Example 1: A test of the hypothesis
 \begin{align}
 H_0: \mu &= 60,\\
