@@ -6,8 +6,6 @@
 #'
 #' @return A numeric with the cross validation error.
 #'
-#' @importFrom stats model.frame model.matrix model.response na.omit predict pt sd
-#' @importFrom dplyr filter
 #' @examples
 #' my_rf_cv(k = 1)
 #' my_rf_cv(k = 5)
