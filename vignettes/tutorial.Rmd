@@ -70,54 +70,5 @@ ttest3
 ```
 The p-value (`ttest2$p_val`) is much greater than the p-value threshold of $\alpha = 0.05$ so there is definitely not sufficient evidence to reject the null hypothesis. 
 
-### `my_lm` Tutorial
-```{r}
-lm_fit <- my_lm(lifeExp ~ gdpPercap + continent, data = my_gapminder)
-
-# plot actual vs fitted
-mod_fits <- lm_fit$ybar
-# create data frame for plotting
-my_df <- data.frame(actual = my_gapminder$lifeExp, fitted = mod_fits)
-ggplot(my_df, aes(x = fitted, y = actual)) +
-  geom_point() +
-  geom_abline(slope = 1, intercept = 0, col = "red", lty = 2) + 
-  theme_bw(base_size = 15) +
-  labs(x = "Fitted values", y = "Actual values", title = "Actual vs. Fitted") +
-  theme(plot.title = element_text(hjust = 0.5))
-```
-While the `gdpPercap` coefficient is very small (`lm["gdpPercap", "Estimate"]`), it is still significant. The null hypothesis for the `gdpPercap` coefficient is that it does affect life expectancy significantly. The alternative hypothesis is that `gdpPercap` does affect life expectancy significantly. The p-value for the gdpPercap coefficient is `lm["gdpPercap", "Pr(>|t|)"]` which is much below the p-value cut off of 0.05. Thus, there is sufficient evidence to reject the null hypothesis and conclude that gdp per capita affects life expectancy.
-
-The Actual vs. Fitted plot shows that the model fit has four clusters. Each cluster is poorly fitted by the model.
-
-### `my_knn_cv` Tutorial
-``` {r}
-# copy covariates
-x <- my_penguins[, c("bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g")]
-# copy true labels
-y <- my_penguins$species
-# remove NAs from x and y
-temp <- cbind(x, y)
-temp <- na.omit(temp)
-x <- temp[, -5]
-y <- temp[, 5]
-# conduct prediction and 5-fold cross validation from k_nn = 1 to 10
-knn_list <- list()
-cv_err_list <- list()
-missclassification_err_list <- list()
-library(class)
-for (i in 1:10) {
-  knn_list[[i]] <- my_knn_cv(train = x, cl = y, k_nn = i, k_cv = 5)
-  cv_err_list[[i]] <- knn_list[[i]]$cv_err
-  missclassification_err_list[[i]] <- as.double(length(knn_list[[i]]$class[knn_list[[i]]$class != y])) / length(knn_list[[i]]$class)
-}
-err_mat <- cbind(cv_err_list, missclassification_err_list)
-colnames(err_mat) <- c("cv", "missclassification")
-err_mat
-
-```
-Based on the training misclassification rates, k = 1 is the best model. Based on CV misclassification rates, k = 1 is also the best model. In practice, I would choose the model that minimizes the CV misclassifcation rates, rather than the misclassification rates. In cross validation, the misclassification error is calculated for each fold and the CV misclassification error is the mean of the  misclassification errors for each fold. Thus the CV error is able to gauge the error of the predictions based on the training.
-
-### `my_rf_cv` Tutorial
-
 
 
