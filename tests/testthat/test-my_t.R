@@ -1,9 +1,9 @@
 test_that("alternative = less works", {
-  expect_equal(my_t.test(my_gapminder$lifeExp, alternative = "less", 60), list("test_stat" = -1.6795477, "df" = 1703, "alternative" = "less", "p_val" = 0.046614385))
+  expect_equal(my_t.test(my_gapminder$lifeExp, alternative = "less", 60), list("test_stat" = -1.67954774, "df" = 1703, "alternative" = "less", "p_val" = 0.046614385))
 })
 
 test_that("alternative = greater works", {
-  expect_equal(my_t.test(my_gapminder$lifeExp, alternative = "greater", 60), list("test_stat" = -1.6795477, "df" = 1703, "alternative" = "greater", "p_val" = 0.95338562))
+  expect_equal(my_t.test(my_gapminder$lifeExp, alternative = "greater", 60), list("test_stat" = -1.67954774, "df" = 1703, "alternative" = "greater", "p_val" = 0.95338562))
 })
 
 test_that("alternative = two.sided works", {
