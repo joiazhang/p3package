@@ -1,3 +1,5 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+
+output <- my_lm(lifeExp ~ gdpPercap + continent, data = my_gapminder)
+test_that("output correct", {
+  expect_equal(my_lm(lifeExp ~ gdpPercap + continent, data = my_gapminder), output)
 })
