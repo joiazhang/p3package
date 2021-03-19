@@ -28,4 +28,6 @@ Imports:
     dplyr,
     class,
     ggplot2,
-    class::knn
+    class::knn,
+    class::knn (),
+    magrittr
