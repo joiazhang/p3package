@@ -12,7 +12,8 @@ my_lm(formula, data)
 \item{data}{input data frame.}
 }
 \value{
-A matrix summarizing the coefficients of the linear fit.
+A list with elements \code{Coefficients} which is a matrix containing
+coefficients, standard error, t value, and p value, \code{ybar} the predictions
 }
 \description{
 This function fits a linear model.

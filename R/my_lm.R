@@ -5,7 +5,8 @@
 #' @param formula object of class formula to fit a linear model for.
 #' @param data input data frame.
 #'
-#' @return A matrix summarizing the coefficients of the linear fit.
+#' @return A list with elements \code{Coefficients} which is a matrix containing
+#'  coefficients, standard error, t value, and p value, \code{ybar} the predictions
 #'
 #' @export
 my_lm <- function(formula, data) {

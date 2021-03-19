@@ -27,4 +27,5 @@ Imports:
     utils,
     dplyr,
     class,
-    ggplot2
+    ggplot2,
+    class::knn
