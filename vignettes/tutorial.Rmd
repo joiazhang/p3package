@@ -112,7 +112,7 @@ library(class)
 for (i in 1:10) {
   knn_list[[i]] <- my_knn_cv(train = x, cl = y, k_nn = i, k_cv = 5)
   cv_err_list[[i]] <- knn_list[[i]]$cv_err
-  missclassification_err_list[[i]] <- as.double(count(knn_list[[i]]$class == y)) / length(knn_list[[i]]$class)
+  missclassification_err_list[[i]] <- as.double(length(knn_list[[i]]$class[knn_list[[i]]$class == y])) / length(knn_list[[i]]$class)
   missclassification_err_list[[i]] <- as.double(length(knn_list[[i]]$class[knn_list[[i]]$class != y])) / length(knn_list[[i]]$class)
 }
 err_mat <- cbind(cv_err_list, missclassification_err_list)
