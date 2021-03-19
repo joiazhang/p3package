@@ -15,9 +15,9 @@
 #' @importFrom stats model.frame model.matrix model.response na.omit predict pt sd
 #' @importFrom dplyr filter
 #' @examples
-#' my_t.test(x = sims, alternative = "greater", mu = true_mean)
-#' my_t.test(x = sims, alternative = "less", mu = true_mean)
-#' my_t.test(x = sims, mu = true_mean)
+#' my_t.test(x = my_data, alternative = "greater", mu = true_mean)
+#' my_t.test(x = my_data, alternative = "less", mu = true_mean)
+#' my_t.test(x = simulations, mu = 0)
 #'
 #' @export
 my_t.test <- function(x, alternative = "two.sided", mu) {

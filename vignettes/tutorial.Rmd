@@ -35,7 +35,8 @@ A test of the hypothesis:
   H_a: \mu &\neq 60.
   \end{align}
 ```{r}
-my_gapminder$lifeExp
+test_data <- my_gapminder$lifeExp
+true_mean <- mean(test_data)
 ```
 
 
