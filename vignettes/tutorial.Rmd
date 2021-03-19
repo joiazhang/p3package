@@ -80,7 +80,7 @@ gdp_p_val <- lm["gdpPercap", "Pr(>|t|)"]
 mod_fits <- lm_fit$ybar
 # create data frame for plotting
 my_df <- data.frame(actual = my_gapminder$lifeExp, fitted = mod_fits)
-ggplot(my_df, aes(x = fitted, y = actual)) +
+myplot <- ggplot(my_df, aes(x = fitted, y = actual)) +
   geom_point() +
   geom_abline(slope = 1, intercept = 0, col = "red", lty = 2) + 
   theme_bw(base_size = 15) +
