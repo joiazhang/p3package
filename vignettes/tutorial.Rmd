@@ -77,8 +77,7 @@ gdpPercap_coeff <- lm["gdpPercap", "Estimate"]
 gdpPercap_p_val <- lm["gdpPercap", "Pr(>|t|)"]
 
 # plot actual vs fitted
-lm_fit <- lm(lifeExp ~ gdpPercap + continent, data = my_gapminder)
-mod_fits <- fitted(lm_fit)
+mod_fits <- lm_fit$ybar
 my_df <- data.frame(actual = my_gapminder$lifeExp, fitted = mod_fits)
 ggplot(my_df, aes(x = fitted, y = actual)) +
   geom_point() +
@@ -87,6 +86,15 @@ ggplot(my_df, aes(x = fitted, y = actual)) +
   labs(x = "Fitted values", y = "Actual values", title = "Actual vs. Fitted") +
   theme(plot.title = element_text(hjust = 0.5))
 ```
-While the `gdpPercap` coefficient is very small (`gdpPercap_coeff`), it is still significant. The null hypothesis for the `gdpPercap` coefficient is that it does affect life expectancy significantly. The alternative hypothesis is that `gdpPercap` does affect life expectancy significantly. The p-value for the gdpPercap coefficient is `gdpPercap_p_val` which is much below the p-value cut off of 0.05. Thus, there is sufficient evidence to reject the null hypothesis and conclude that gdp per capita affects life expectancy. 
+While the `gdpPercap` coefficient is very small (`gdpPercap_coeff`), it is still significant. The null hypothesis for the `gdpPercap` coefficient is that it does affect life expectancy significantly. The alternative hypothesis is that `gdpPercap` does affect life expectancy significantly. The p-value for the gdpPercap coefficient is `gdpPercap_p_val` which is much below the p-value cut off of 0.05. Thus, there is sufficient evidence to reject the null hypothesis and conclude that gdp per capita affects life expectancy.
+
+The Actual vs. Fitted plot shows that the model fit has four clusters. Each cluster is poorly fitted by the model.
+
+### `my_knn_cv` Tutorial
+
+
+
+
+
 
 
