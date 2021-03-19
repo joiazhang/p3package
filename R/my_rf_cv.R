@@ -9,7 +9,7 @@
 #' @export
 my_rf_cv <- function(k) {
   # remove NAs
-  data <- na.omit(penguin_data)
+  data <- na.omit(my_penguins)
   # assigne a random fold to each observation
   fold <- sample(rep(1:k, length = nrow(data)))
   data$fold <- fold
