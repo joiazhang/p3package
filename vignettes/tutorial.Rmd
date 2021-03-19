@@ -25,10 +25,18 @@ You can install the p3package package using the following line:
 devtools::install_github("joiazhang/p3package", build_vignette = TRUE, build_opts = c())
 library(p3package)
 ```
+
 ## Tutorials
 
-# `"my_t.test` Tutorial
-
+### `my_t.test` Tutorial
+A test of the hypothesis:
+\begin{align}
+  H_0: \mu &= 60,\\
+  H_a: \mu &\neq 60.
+  \end{align}
+```{r}
+my_gapminder$lifeExp
+```
 
 
 
