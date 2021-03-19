@@ -14,7 +14,7 @@
 #'
 #' @export
 my_rf_cv <- function(k) {
-  library(randomForest)
+  usethis::use_package("randomForest")
   # remove NAs
   data <- na.omit(my_penguins)
   # assigne a random fold to each observation
