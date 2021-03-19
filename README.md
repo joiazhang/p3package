@@ -9,10 +9,22 @@ The goal of p3package is to ...
 
 ## Installation
 
-You can install the released version of p3package from [CRAN](https://CRAN.R-project.org) with:
+You can install the p3package package using the following line:
 
-``` r
-install.packages("p3package")
+```r
+# install.packages("devtools")
+devtools::install_github("joiazhang/p3package", build_vignette = TRUE, build_opts = c())
+library(p3package)
+```
+## Use
+The vignette shows example usage of all functions. The vignette may be viewes using the following commands:
+
+```r
+library(p3package)
+# Use this to view the vignette in the corncob HTML help
+help(package = "p3package", help_type = "html")
+# Use this to view the vignette as an isolated HTML file
+utils::browseVignettes(package = "p3package")
 ```
 
 ## Example
