@@ -70,4 +70,4 @@ ttest3
 ```
 The p-value (`ttest2$p_val`) is much greater than the p-value threshold of $\alpha = 0.05$ so there is definitely not sufficient evidence to reject the null hypothesis. 
 
-
+### `my_lm` Tutorial
