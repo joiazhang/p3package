@@ -17,6 +17,8 @@ my_lm <- function(formula, data) {
   Y <- model.response(model_frame)
   # solve for linear regression coefficients
   coeffs <- solve((t(X) %*% X)) %*% (t(X) %*% Y)
+  # create predictions
+  ybar = X %*% coeffs
   # compute degrees of freedom: sample size minus num of covariates
   df <- nrow(X) - ncol(X)
   # estimate residual variance
@@ -28,9 +30,12 @@ my_lm <- function(formula, data) {
   t_vals <- coeffs / se_diag
   # compute p values
   p_vals <- 2 * pt(abs(t_vals), df, lower.tail = FALSE)
-  # create output table
-  output <- cbind(coeffs, se_diag, t_vals, p_vals)
+  # create Coefficients matrix
+  Coefficients = cbind(coeffs, se_diag, t_vals, p_vals)
   # set column names
-  colnames(output) <- c("Estimate", "Std. error", "t value", "Pr(>|t|)")
+  colnames(Coefficients) <- c("Estimate", "Std. error", "t value", "Pr(>|t|)")
+  # create output list
+  output <- list("Coefficients" = Coefficients, "ybar" = ybar)
+
   return(output)
 }
