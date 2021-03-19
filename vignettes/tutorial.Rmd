@@ -81,12 +81,12 @@ gdp_p_val <- lm_fit$Coefficients["gdpPercap", "Pr(>|t|)"]
 mod_fits <- lm_fit$ybar
 # create data frame for plotting
 my_df <- data.frame(actual = my_gapminder$lifeExp, fitted = mod_fits)
-ggplot(my_df, aes(x = fitted, y = actual)) +
-  geom_point() +
-  geom_abline(slope = 1, intercept = 0, col = "red", lty = 2) +
-  theme_bw(base_size = 15) +
-  labs(x = "Fitted values", y = "Actual values", title = "Actual vs. Fitted") +
-  theme(plot.title = element_text(hjust = 0.5))
+# ggplot(my_df, aes(x = fitted, y = actual)) +
+#   geom_point() +
+#   geom_abline(slope = 1, intercept = 0, col = "red", lty = 2) +
+#   theme_bw(base_size = 15) +
+#   labs(x = "Fitted values", y = "Actual values", title = "Actual vs. Fitted") +
+#   theme(plot.title = element_text(hjust = 0.5))
 ```
 While the gdpPercap coefficient is very small (), it is still significant. The null hypothesis for the gdpPercap coefficient is that it does affect life expectancy significantly. The alternative hypothesis is that gdpPercap does affect life expectancy significantly. The p-value for the gdpPercap coefficient is () which is much below the p-value cut off of 0.05. Thus, there is sufficient evidence to reject the null hypothesis and conclude that gdp per capita affects life expectancy.
 
