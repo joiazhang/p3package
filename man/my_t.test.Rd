@@ -23,9 +23,3 @@ the parameter \code{alternative}, and \code{p_val} the numeric p value.
 \description{
 This function performs a one sample t-test.
 }
-\examples{
-my_t.test(x = my_data, alternative = "greater", mu = true_mean)
-my_t.test(x = my_data, alternative = "less", mu = true_mean)
-my_t.test(x = simulations, mu = 0)
-
-}

@@ -17,7 +17,3 @@ A matrix summarizing the coefficients of the linear fit.
 \description{
 This function fits a linear model.
 }
-\examples{
-my_lm(mpg ~ hp + wt, data = mtcars)
-
-}
