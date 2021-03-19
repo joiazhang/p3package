@@ -27,18 +27,44 @@ library(p3package)
 ```
 
 ## Tutorials
+A p-value cut off of $\alpha = 0.05$ will be used in these tutorials.
 
 ### `my_t.test` Tutorial
-A test of the hypothesis:
+#### Example 1: A test of the hypothesis
 \begin{align}
-  H_0: \mu &= 60,\\
-  H_a: \mu &\neq 60.
-  \end{align}
+H_0: \mu &= 60,\\
+H_a: \mu &\neq 60.
+\end{align}
+
 ```{r}
-test_data <- my_gapminder$lifeExp
-true_mean <- mean(test_data)
+# alternative = two.sided is the default
+ttest1 <- my_t.test(x = my_gapminder$lifeExp, mu = 60)
+ttest1
 ```
+The p-value (`ttest1$p_val`) is greater than the p-value threshold of $\alpha = 0.05$ so there is not sufficient evidence to reject the null hypothesis. 
 
+#### Example 2: A test of the hypothesis
+\begin{align}
+H_0: \mu &= 60,\\
+H_a: \mu &< 60.
+\end{align}
 
+```{r}
+ttest2 <- my_t.test(x = my_gapminder$lifeExp, alternative = "less", mu = 60)
+ttest2
+```
+The p-value (`ttest2$p_val`) is less than the p-value threshold of $\alpha = 0.05$ so there is sufficient evidence to reject the null hypothesis. 
+
+#### Example 3: A test of the hypothesis
+\begin{align}
+H_0: \mu &= 60,\\
+H_a: \mu &> 60.
+\end{align}
+
+```{r}
+ttest3 <- my_t.test(x = my_gapminder$lifeExp, alternative = "greater", mu = 60)
+ttest3
+```
+The p-value (`ttest2$p_val`) is much greater than the p-value threshold of $\alpha = 0.05$ so there is definitely not sufficient evidence to reject the null hypothesis.
 
 
