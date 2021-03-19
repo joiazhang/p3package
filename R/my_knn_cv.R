@@ -6,6 +6,7 @@
 #' @param cl true labels of each observation.
 #' @param k_nn integer representing the number of neighbors.
 #' @param k_cv integer representing the number of folds.
+#' @keywords prediction
 #'
 #' @return A list with objects \code{class} a vector of the predicted class for all observations, \code{cv_err} a numeric with the cross-validation misclassification error.
 #'

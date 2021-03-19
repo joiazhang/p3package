@@ -4,6 +4,7 @@
 #'
 #' @param formula object of class formula to fit a linear model for.
 #' @param data input data frame.
+#' @keywords inference
 #'
 #' @return A list with elements \code{Coefficients} which is a matrix containing
 #'  coefficients, standard error, t value, and p value, \code{ybar} the predictions

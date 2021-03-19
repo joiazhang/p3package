@@ -7,6 +7,7 @@
 #'  and this should be \code{"two.sided"}, \code{"less"}, or \code{"greater"}
 #'  otherwise an error will be thrown. Default is \code{"two.sided"}.
 #' @param mu a numeric indicating the null hypothesis value of the mean.
+#' @keywords inference, prediction
 #'
 #' @return A list with elements: \code{test_stat} the numeric test
 #'  statistic, \code{df} the degrees of freedom, \code{alternative} the value of

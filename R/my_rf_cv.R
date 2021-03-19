@@ -3,13 +3,9 @@
 #' This function fits a linear model.
 #'
 #' @param k integer representing number of folds.
+#' @keywords prediction
 #'
 #' @return A numeric with the cross validation error.
-#'
-#' @examples
-#' my_rf_cv(2)
-#' my_rf_cv(5)
-#' my_rf_cv(10)
 #'
 #' @export
 my_rf_cv <- function(k) {
