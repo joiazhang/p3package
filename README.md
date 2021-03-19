@@ -11,7 +11,7 @@ The goal of p3package is to ...
 
 You can install the p3package package using the following line:
 
-```r
+```r{eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("joiazhang/p3package", build_vignette = TRUE, build_opts = c())
 library(p3package)
@@ -19,7 +19,7 @@ library(p3package)
 ## Use
 The vignette shows example usage of all functions. The vignette may be viewes using the following commands:
 
-```r
+```r{eval = FALSE}
 library(p3package)
 # Use this to view the vignette in the corncob HTML help
 help(package = "p3package", help_type = "html")
