@@ -25,4 +25,5 @@ Imports:
     tibble,
     gapminder,
     utils,
-    dplyr
+    dplyr,
+    class

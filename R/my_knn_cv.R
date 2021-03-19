@@ -9,8 +9,6 @@
 #'
 #' @return A list with objects \code{class} a vector of the predicted class for all observations, \code{cv_err} a numeric with the cross-validation misclassification error.
 #'
-#' @importFrom stats model.frame model.matrix model.response na.omit predict pt sd
-#' @importFrom dplyr filter
 #' @examples
 #' my_knn_cv(train = x, cl = y, k_nn = 1, k_cv = 5)
 #' my_knn_cv(train = x, cl = y, k_nn = 5, k_cv = 10)
