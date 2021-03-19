@@ -15,7 +15,7 @@
 #' @examples
 #' my_t.test(my_gapminder$lifeExp, alternative = "less", 60)
 #' my_t.test(my_gapminder$lifeExp, alternative = "greater", 60)
-#' my_t.test(my_gapminder$lifeExp, 60)
+#' my_t.test(x = my_gapminder$lifeExp, mu = 60)
 #'
 #' @export
 my_t.test <- function(x, alternative = "two.sided", mu) {

@@ -24,8 +24,8 @@ the parameter \code{alternative}, and \code{p_val} the numeric p value.
 This function performs a one sample t-test.
 }
 \examples{
-my_t.test(data, alternative = "less", null_mean)
-my_t.test(data, alternative = "greater", null_mean)
-my_t.test(data, 60)
+my_t.test(my_gapminder$lifeExp, alternative = "less", 60)
+my_t.test(my_gapminder$lifeExp, alternative = "greater", 60)
+my_t.test(my_gapminder$lifeExp, 60)
 
 }
