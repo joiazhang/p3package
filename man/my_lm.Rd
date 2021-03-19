@@ -20,6 +20,6 @@ This function fits a linear model.
 }
 \examples{
 my_lm(mpg ~ hp + wt, data = mtcars)
-my_lm(lifeExp ~ gdpPerCap + continent, data = my_gapminder)
+my_lm(lifeExp ~ gdpPercap + continent, data = my_gapminder)
 
 }

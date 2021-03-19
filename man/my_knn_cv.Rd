@@ -21,3 +21,8 @@ A list with objects \code{class} a vector of the predicted class for all observa
 \description{
 This function fits a linear model.
 }
+\examples{
+my_knn_cv(my_penguins[, c("bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g")], my_penguins$species, 5, 5)
+my_knn_cv(my_gapminder[, c(2, 4, 5, 6)], my_gapminder[, 1], 1, 10)
+
+}
