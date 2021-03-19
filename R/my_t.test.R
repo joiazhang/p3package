@@ -1,4 +1,4 @@
-#' t-test function
+#' t-test Function
 #'
 #' This function performs a one sample t-test.
 #'
