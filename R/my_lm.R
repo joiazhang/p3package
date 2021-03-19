@@ -11,6 +11,7 @@
 my_lm <- function(formula, data) {
   # extract model matrix X
   X <- model.matrix(formula, data)
+  print(head(X))
   # extract a model frame object
   model_frame <- model.frame(formula, data)
   # extract model response Y
