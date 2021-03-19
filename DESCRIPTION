@@ -1,0 +1,15 @@
+Package: p3package
+Title: Project 3
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Joia",
+           family = "Zhang",
+           role = c("aut", "cre"),
+           email = "joiaz@uw.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Includes functions for statistical prediction and statistical inference.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
