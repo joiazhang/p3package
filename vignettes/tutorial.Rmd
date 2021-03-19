@@ -1,0 +1,20 @@
+---
+title: "Project 3: p3package Tutorial"
+author: "Joia Zhang"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{p3package Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(p3package)
+```
