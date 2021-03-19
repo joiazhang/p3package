@@ -6,10 +6,6 @@
 #'
 #' @return A numeric with the cross validation error.
 #'
-#' @examples
-#' my_rf_cv(k = 1)
-#' my_rf_cv(k = 5)
-#'
 #' @export
 my_rf_cv <- function(k) {
   # remove NAs

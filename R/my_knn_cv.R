@@ -9,7 +9,6 @@
 #'
 #' @return A list with objects \code{class} a vector of the predicted class for all observations, \code{cv_err} a numeric with the cross-validation misclassification error.
 #'
-#'
 #' @export
 my_knn_cv <- function(train, cl, k_nn, k_cv) {
   # remove NAs from train and cl
