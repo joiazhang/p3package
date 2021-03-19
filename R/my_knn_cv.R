@@ -11,7 +11,6 @@
 #'
 #' @examples
 #' my_knn_cv(my_penguins[, c("bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g")], my_penguins$species, 5, 5)
-#' my_knn_cv(my_gapminder[, c(2, 4, 5, 6)], my_gapminder[, 1], 1, 10)
 #'
 #' @export
 my_knn_cv <- function(train, cl, k_nn, k_cv) {

@@ -26,6 +26,6 @@ Imports:
     gapminder,
     utils,
     dplyr,
-    class,
     ggplot2,
-    magrittr
+    magrittr,
+    class
