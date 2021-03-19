@@ -15,7 +15,7 @@ devtools::install_github("joiazhang/p3package", build_vignette = TRUE, build_opt
 library(p3package)
 ```
 ## Use
-The vignette shows example usage of all functions. The vignette may be viewes using the following commands:
+The vignette shows example usage of all functions. The vignette may be viewed using the following commands:
 
 ```r{eval = FALSE}
 library(p3package)

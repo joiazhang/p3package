@@ -7,7 +7,8 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-This package contains functions for statistical prediction and statistical inference.
+The p3package package contains functions for statistical prediction and statistical inference. Included are one sample t-test, linear model, K-nearest neighbors, and random forest functions. Such functions may be useful for conducting hypothesis testing, modeling, and prediction.
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -24,14 +25,3 @@ You can install the p3package package using the following line:
 devtools::install_github("joiazhang/p3package", build_vignette = TRUE, build_opts = c())
 library(p3package)
 ```
-## Use
-The vignette shows example usage of all functions. The vignette may be viewes using the following commands:
-
-```r{eval = FALSE}
-library(p3package)
-# Use this to view the vignette in the corncob HTML help
-help(package = "p3package", help_type = "html")
-# Use this to view the vignette as an isolated HTML file
-utils::browseVignettes(package = "p3package")
-```
-
