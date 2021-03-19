@@ -12,6 +12,8 @@
 #'  statistic, \code{df} the degrees of freedom, \code{alternative} the value of
 #'  the parameter \code{alternative}, and \code{p_val} the numeric p value.
 #'
+#' @importFrom stats model.frame model.matrix model.response na.omit predict pt sd
+#' @importFrom dplyr filter
 #' @examples
 #'
 #' @export
