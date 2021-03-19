@@ -12,13 +12,6 @@
 #'  statistic, \code{df} the degrees of freedom, \code{alternative} the value of
 #'  the parameter \code{alternative}, and \code{p_val} the numeric p value.
 #'
-#' @importFrom stats model.frame model.matrix model.response na.omit predict pt sd
-#' @importFrom dplyr filter
-#' @examples
-#' my_t.test(x = my_data, alternative = "greater", mu = true_mean)
-#' my_t.test(x = my_data, alternative = "less", mu = true_mean)
-#' my_t.test(x = simulations, mu = 0)
-#'
 #' @export
 my_t.test <- function(x, alternative = "two.sided", mu) {
   # print error message if value for alternate is invalid

@@ -7,11 +7,6 @@
 #'
 #' @return A matrix summarizing the coefficients of the linear fit.
 #'
-#' @importFrom stats model.frame model.matrix model.response na.omit predict pt sd
-#' @importFrom dplyr filter
-#' @examples
-#' my_lm(mpg ~ hp + wt, data = mtcars)
-#'
 #' @export
 my_lm <- function(formula, data) {
   # extract model matrix X
