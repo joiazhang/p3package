@@ -3,6 +3,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/joiazhang/p3package/workflows/R-CMD-check/badge.svg)](https://github.com/joiazhang/p3package/actions)
+[![codecov](https://codecov.io/gh/joiazhang/p3package/branch/master/graph/badge.svg?token=6K13X4UKG2)](https://codecov.io/gh/joiazhang/p3package)
 <!-- badges: end -->
 
 ## Installation
