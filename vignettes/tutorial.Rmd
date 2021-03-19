@@ -118,8 +118,6 @@ err_mat
 Based on the training misclassification rates, k = 1 is the best model. Based on CV misclassification rates, k = 1 is also the best model. In practice, I would choose the model that minimizes the CV misclassifcation rates, rather than the misclassification rates. In cross validation, the misclassification error is calculated for each fold and the CV misclassification error is the mean of the  misclassification errors for each fold. Thus the CV error is able to gauge the error of the predictions based on the training.
 
 ### `my_rf_cv` Tutorial
-```{r}
 
-```
 
 
