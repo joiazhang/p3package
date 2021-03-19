@@ -10,6 +10,9 @@
 #'
 #' @return A list with objects \code{class} a vector of the predicted class for all observations, \code{cv_err} a numeric with the cross-validation misclassification error.
 #'
+#' @examples
+#' my_knn_cv(my_penguins[, c("bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g")], my_penguins$species, 5, 5)
+#'
 #' @export
 my_knn_cv <- function(train, cl, k_nn, k_cv) {
   # remove NAs from train and cl
@@ -32,13 +35,13 @@ my_knn_cv <- function(train, cl, k_nn, k_cv) {
     cl_train_folds <- cl[!inds]
     test_fold <- train[inds, -5]
     cl_test_fold <- cl[inds]
-    yhat_cv[[i]] <- knn(train = train_folds, test = test_fold, cl = cl_train_folds, k = k_nn)
+    yhat_cv[[i]] <- class::knn(train = train_folds, test = test_fold, cl = cl_train_folds, k = k_nn)
     # record misclassification error
     correct_pred <- cl_test_fold == yhat_cv[[i]]
     missclass_err[[i]] <- as.double(length(correct_pred[correct_pred == F])) / length(cl_test_fold)
   }
   # compute knn with full data
-  class <- knn(train = train, test = train, cl = cl, k = k_nn)
+  class <- class::knn(train = train, test = train, cl = cl, k = k_nn)
   # compute average misclassification rate from cross validation
   cv_error <- mean(unlist(missclass_err))
   output <- list("class" = class, "cv_error" = cv_error)
