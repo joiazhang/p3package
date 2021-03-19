@@ -75,7 +75,7 @@ The p-value (`ttest2$p_val`) is much greater than the p-value threshold of $\alp
 
 ```{r}
 lm_fit <- my_lm(lifeExp ~ gdpPercap + continent, data = my_gapminder)
-# gdp_coeff <- lm["gdpPercap", "Estimate"]
+gdp_coeff <- lm["gdpPercap", "Estimate"]
 # gdp_p_val <- lm["gdpPercap", "Pr(>|t|)"]
 # # plot actual vs fitted
 # mod_fits <- lm_fit$ybar
