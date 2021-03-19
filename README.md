@@ -5,8 +5,6 @@
 [![R-CMD-check](https://github.com/joiazhang/p3package/workflows/R-CMD-check/badge.svg)](https://github.com/joiazhang/p3package/actions)
 <!-- badges: end -->
 
-The goal of p3package is to ...
-
 ## Installation
 
 You can install the p3package package using the following line:
@@ -26,13 +24,3 @@ help(package = "p3package", help_type = "html")
 # Use this to view the vignette as an isolated HTML file
 utils::browseVignettes(package = "p3package")
 ```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(p3package)
-## basic example code
-```
-
